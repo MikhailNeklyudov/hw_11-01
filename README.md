@@ -10,11 +10,12 @@
 4. Сглаживаются бусты трафика.
 
 Задание 2.
-
+![image](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/6f66b863-058d-4b59-b5a2-62c7e843658d)
 
 Задание 3. 
 
-
+![image](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/f65c907a-714a-4119-bd0d-a6c104cfd648)
+![image](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/7073b533-f815-4764-a459-22b2f14c5856)
 
 Задание 4.
 
