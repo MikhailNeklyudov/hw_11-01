@@ -19,5 +19,8 @@
 
 Задание 4.
 
+![image](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/66e8f0a5-907e-48be-9126-ade1917ef1d2)
 
 Задание 5.
+
+![image](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/593044f2-83a4-43b9-89ce-dd6215ea299b)
