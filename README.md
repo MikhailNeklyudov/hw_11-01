@@ -6,6 +6,7 @@
 
 
 Задание 2.
+![image](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/73785d94-ee7c-4000-95c6-1fea5c4e68a8)
 
 
 Задание 3. 
