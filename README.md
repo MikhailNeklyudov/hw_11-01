@@ -14,6 +14,5 @@
 
 
 Задание 4.
+![image](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/bbfe999c-c4db-4d7a-a795-6f6be8f7e4bb)
 
-
-Задание 5.
