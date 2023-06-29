@@ -28,4 +28,11 @@
 
 ![image](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/d346bc59-987d-49d2-b0e4-121c31cd5747)
 
+Выполнение consumer.py
+![image](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/a7db4a2a-ea4a-4a3c-9edc-d057d38d0599)
+
+Консумер на мастере
+![image](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/5f56e3af-64e3-4736-8efa-a57541787bba)
+Консумер на 2 ноде
+![image](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/807616a4-7b62-4211-b0ae-1c088c5c894c)
 
