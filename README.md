@@ -7,6 +7,8 @@
 
 Задание 2.
 ![image](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/cc2ce08c-ac41-4f34-96cb-c173e5e59ce0)
+![image](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/53a89b02-f5fb-4b1a-a0f1-32ec1308ac30)
+![image](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/2a5b189e-56ba-4618-be95-7621a76e2bac)
 
 
 Задание 3. 
