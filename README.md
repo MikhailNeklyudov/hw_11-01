@@ -19,30 +19,10 @@
 
 
 #Задание 2.
- actor                      |	 actor_id       |      film_id
-| actor_info                 |	| actor_id
-| address                    |	| address_id
-| category                   |	| category_id
-| city                       |	| city_id
-| country                    |	| country_id
-| customer                   |	| customer_id
-| customer_list              |	ID
-| film                       |	| film_id
-| film_actor                 |	actor_id     | film_id
-| film_category              |	| film_id      |    category_id
-| film_list                  |	FID
-| film_text                  |	| film_id
-| inventory                  |	| inventory_id
-| language                   |	| language_id
-| nicer_but_slower_film_list |	FID
-| payment                    |	| payment_id
-| rental                     |	| rental_id
-| sales_by_film_category     |	category
-| sales_by_store             |	store             
-| staff                      |	| staff _id
-| staff_list                 |	ID
-| store          	| store_id
+
 ![image](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/c14d51b5-a4f6-4356-b74a-8300a246fdec)
+
+![image](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/922be430-4132-461a-8c59-5482319372af)
 
 
 #Задание 3.
