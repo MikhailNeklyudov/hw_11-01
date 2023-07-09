@@ -27,6 +27,9 @@
 
 #Задание 3.
 
+ REVOKE INSERT, DELETE, UPDATE ON `sakila`.* FROM 'sys_temp'@'localhost';
+
+ ![image](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/c48f52dc-9dae-447a-9ce2-6eaa8a2cabbe)
 
 
 
