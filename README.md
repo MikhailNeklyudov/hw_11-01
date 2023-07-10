@@ -8,6 +8,7 @@
 
 
 #Задание 3.
+![Задание 3](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/d398b6ba-92eb-43b4-a8b7-5adfc4d9dd5c)
 
 
 #Задание 4.
