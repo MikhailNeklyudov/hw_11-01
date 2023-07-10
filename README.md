@@ -2,6 +2,7 @@
 
 
 #Задание 1.
+![Задание 1](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/15f27570-cabf-4889-8d8a-0f19a766c92e)
 
 
 #Задание 2.
