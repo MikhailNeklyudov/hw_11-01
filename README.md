@@ -5,6 +5,7 @@
 
 
 #Задание 2.
+![Задание 2](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/7e36a381-ed75-47a3-ab45-64a8d71017a3)
 
 
 #Задание 3.
