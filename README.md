@@ -18,6 +18,7 @@
 
 
 #Задание 5.
+![задание 5](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/708afff1-b2ab-4a17-bfbf-67ab5560a3c7)
 
 
 #Задание 6.
