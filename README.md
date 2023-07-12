@@ -49,9 +49,7 @@ WHERE first_name = 'Kelly' OR first_name = 'Willie';
 
 #Задание 5.
 
-SELECT SUBSTRING_INDEX(email, '@', 1) as e, SUBSTRING_INDEX(email, '@', -1) as mail,
-
-UPPER(LEFT(email, 1)
+SELECT SUBSTRING_INDEX(email, '@', 1) as e, SUBSTRING_INDEX(email, '@', -1) as mail
 
 from customer;
 
