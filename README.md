@@ -3,6 +3,16 @@
 
 #Задание 1.
 
+SELECT CONCAT(s.first_name, ' ', s.last_name) as Фамилия_имя_сотрудника_магазина, Количество_покупателей
+FROM staff s
+JOIN (
+SELECT store_id, COUNT(customer_id) AS Количество_покупателей
+FROM customer c
+GROUP BY store_id) t1 ON s.store_id = t1.store_id
+HAVING Количество_покупателей > 300;
+
+![VirtualBox_Debian11-master_21_07_2023_12_51_46](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/0821aabd-6f7f-4700-91b4-b0c5ac830ee7)
+
 
 #Задание 2.
 
