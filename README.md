@@ -3,9 +3,13 @@
 
 #Задание 1.
 
-SELECT CONCAT(s.first_name, ' ', s.last_name) as Фамилия_имя_сотрудника_магазина, Количество_покупателей
+ELECT CONCAT(s.first_name, ' ', s.last_name) as Фамилия_имя_сотрудника_магазина, Количество_покупателей, c2.city as Город
 
 FROM staff s
+
+Left join address a on a.address_id = s.address_id
+
+LEFT JOIN city c2 on c2.city_id = a.city_id 
 
 JOIN (
 
@@ -17,7 +21,7 @@ GROUP BY store_id) t1 ON s.store_id = t1.store_id
 
 HAVING Количество_покупателей > 300;
 
-![VirtualBox_Debian11-master_21_07_2023_12_51_46](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/0821aabd-6f7f-4700-91b4-b0c5ac830ee7)
+![VirtualBox_Debian11-master_21_07_2023_14_43_46](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/10ca0df1-e1cd-4d76-9cb1-38e3a3186a88)
 
 
 #Задание 2.
