@@ -38,6 +38,15 @@ WHERE length > (SELECT AVG(length) from film);
 
 #Задание 3.
 
+SELECT MONTH(payment_date), COUNT(r.rental_id), SUM(amount)
+
+from payment p
+
+join rental r on r.rental_id = p.rental_id 
+
+GROUP BY MONTH(payment_date);
+
+![VirtualBox_Debian11-master_21_07_2023_15_25_37](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/19042279-5427-473f-b028-1df25e2c2c47)
 
 
 #Задание 4.
