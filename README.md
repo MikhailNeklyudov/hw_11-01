@@ -53,6 +53,27 @@ ORDER BY SUM(amount) DESC LIMIT 1;
 
 #Задание 4.
 
+SELECT staff_id, COUNT(payment_id),
+
+CASE
+
+WHEN count(payment_id) > 8000 THEN 'Да'
+
+WHEN COUNT(payment_id) < 8000 THEN 'Нет'
+
+ELSE 'Average user'
+
+END AS Премия
+
+FROM payment p 
+
+GROUP BY staff_id
+
+ORDER BY COUNT(payment_id) DESC
+
+LIMIT 5;
+
+![VirtualBox_Debian11-master_22_07_2023_12_47_54](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/40d56ec2-9dbf-441d-a4eb-6834f4d205e4)
 
  
 #Задание 5.
