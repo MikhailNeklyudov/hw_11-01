@@ -42,12 +42,13 @@ SELECT MONTHNAME(payment_date), COUNT(r.rental_id), SUM(amount)
 
 from payment p
 
-join rental r on r.rental_id = p.rental_id 
+join rental r on r.rental_id = p.rental_id
 
-GROUP BY MONTHNAME(payment_date);
+GROUP BY MONTHNAME(payment_date)
 
-![VirtualBox_Debian11-master_22_07_2023_07_09_47](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/df0199f1-6e3c-4f5e-afec-906ceb05bc3d)
+ORDER BY SUM(amount) DESC LIMIT 1;
 
+![VirtualBox_Debian11-master_22_07_2023_07_30_44](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/6dcf1ec0-3ecd-403b-83d8-cc6ddaaaab22)
 
 
 #Задание 4.
