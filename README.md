@@ -78,3 +78,15 @@ LIMIT 5;
  
 #Задание 5.
 
+SELECT f.title
+
+FROM film f
+
+LEFT JOIN inventory i ON i.film_id = f.film_id
+
+LEFT JOIN rental r ON r.inventory_id = i.inventory_id
+
+WHERE r.rental_id IS NULL;
+
+![VirtualBox_Debian11-master_22_07_2023_13_40_27](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/e0a5487a-e908-4c4b-b191-847589d9dc7d)
+
