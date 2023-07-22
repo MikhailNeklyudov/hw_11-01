@@ -38,17 +38,18 @@ WHERE length > (SELECT AVG(length) from film);
 
 #Задание 3.
 
-SELECT MONTHNAME(payment_date), COUNT(r.rental_id), SUM(amount) 
+SELECT DATE_FORMAT(payment_date, '%M – %Y'), COUNT(r.rental_id), SUM(amount)
 
 from payment p
 
 join rental r on r.rental_id = p.rental_id
 
-GROUP BY MONTHNAME(payment_date)
+GROUP BY DATE_FORMAT(payment_date, '%M – %Y')
 
 ORDER BY SUM(amount) DESC LIMIT 1;
 
-![VirtualBox_Debian11-master_22_07_2023_07_30_44](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/6dcf1ec0-3ecd-403b-83d8-cc6ddaaaab22)
+![VirtualBox_Debian11-master_22_07_2023_17_34_20](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/3f4ecabb-761c-427a-b4c9-e5f95be94d1b)
+
 
 
 #Задание 4.
