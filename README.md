@@ -82,5 +82,5 @@ Limit: 200 row(s)  (actual time=11.8..11.8 rows=200 loops=1)
 
 #Задание 3.
 
-
+В PostgreSQL как и в MySQL используются индексы B-TREE, HASH, а также GiST, SP-GiST, GIN, BRIN.  
 
