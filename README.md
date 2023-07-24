@@ -38,47 +38,42 @@ GROUP BY фамилия_имя
 
 # Explain analyze Запроса
 
--> Limit: 200 row(s)  (actual time=10.7..10.7 rows=200 loops=1)
+Limit: 200 row(s)  (actual time=4.79..4.82 rows=200 loops=1)
 
-    -> Table scan on <temporary>  (actual time=10.7..10.7 rows=200 loops=1)
+    -> Table scan on <temporary>  (actual time=4.78..4.81 rows=200 loops=1)
     
-        -> Aggregate using temporary table  (actual time=10.7..10.7 rows=391 loops=1)
+        -> Aggregate using temporary table  (actual time=4.78..4.78 rows=391 loops=1)
         
-            -> Nested loop inner join  (cost=5596 rows=15813) (actual time=0.0875..10.3 rows=634 loops=1)
+            -> Nested loop inner join  (cost=2220 rows=1757) (actual time=0.0502..4.42 rows=634 loops=1)
             
-                -> Table scan on c  (cost=61.2 rows=599) (actual time=0.0307..0.148 rows=599 loops=1)
+                -> Filter: ((p.payment_date >= TIMESTAMP'2005-07-30 00:00:00') and (p.payment_date < <cache>(('2005-07-30' + interval 1 day))))  (cost=1606 rows=1757) (actual time=0.034..4 rows=634 loops=1)
                 
-                -> Filter: (cast(p.payment_date as date) = '2005-07-30')  (cost=6.6 rows=26.4) (actual time=0.0153..0.0169 rows=1.06 loops=599)
-                
-                    -> Index lookup on p using idx_fk_customer_id (customer_id=c.customer_id)  (cost=6.6 rows=26.4) (actual time=0.0133..0.0155 rows=26.8 loops=599
+                    -> Table scan on p  (cost=1606 rows=15813) (actual time=0.0267..2.96 rows=16044 loops=1)
+                    
+                -> Single-row index lookup on c using PRIMARY (customer_id=p.customer_id)  (cost=0.25 rows=1) (actual time=516e-6..536e-6 rows=1 loops=634)
 
-Добавлены индексы payment_data и amount.
 
-CREATE INDEX data_amount ON payment(payment_date, amount);
-![VirtualBox_Debian11-master_24_07_2023_11_23_32](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/6d3120d0-5a4a-4d10-96f9-7f52eb9b7b49)
+Использование индекса payment_date
+
+show INDEX from payment
+
+![VirtualBox_Debian11-master_24_07_2023_13_20_04](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/bcc59d59-549f-4024-8320-18f4878ce314)
 
 # Explain analyze Запроса после индексации
 
-Limit: 200 row(s)  (actual time=11.8..11.8 rows=200 loops=1)
+Limit: 200 row(s)  (actual time=1.26..1.28 rows=200 loops=1)
 
-    -> Table scan on <temporary>  (actual time=11.8..11.8 rows=200 loops=1)
+    -> Table scan on <temporary>  (actual time=1.26..1.28 rows=200 loops=1)
     
-        -> Aggregate using temporary table  (actual time=11.8..11.8 rows=391 loops=1)
+        -> Aggregate using temporary table  (actual time=1.26..1.26 rows=391 loops=1)
         
-            -> Nested loop inner join  (cost=5596 rows=15813) (actual time=0.109..11.4 rows=634 loops=1)
+            -> Nested loop inner join  (cost=507 rows=634) (actual time=0.0223..0.979 rows=634 loops=1)
             
-                -> Table scan on c  (cost=61.2 rows=599) (actual time=0.0351..0.153 rows=599 loops=1)
+                -> Index range scan on p using data_data over ('2005-07-30 00:00:00' <= payment_date < '2005-07-31 00:00:00'), with index condition: ((p.payment_date >= TIMESTAMP'2005-07-30 00:00:00') and (p.payment_date < <cache>(('2005-07-30' + interval 1 day))))  (cost=286 rows=634) (actual time=0.0164..0.551 rows=634 loops=1)
                 
-                -> Filter: (cast(p.payment_date as date) = '2005-07-30')  (cost=6.6 rows=26.4) (actual time=0.0168..0.0187 rows=1.06 loops=599)
-                
-                    -> Index lookup on p using idx_fk_customer_id (customer_id=c.customer_id)  (cost=6.6 rows=26.4) (actual time=0.0147..0.0172 rows=26.8 loops=599)
-                    
+                -> Single-row index lookup on c using PRIMARY (customer_id=p.customer_id)  (cost=0.25 rows=1) (actual time=554e-6..571e-6 rows=1 loops=634)
 
-После индексации время на выполнение потребовалось больше, стоимость запроса не изменилась.
-
-Менял индексацию, время увеличивалось, даже после удаления индексов время выполнения какждый раз возрастает.
-
-Индексации в данном случае не требуется. 
+Как я понимаю из вывода время по индексированным позициям уменьшилось. 
 
 #Задание 3.
 
