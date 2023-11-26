@@ -22,5 +22,10 @@ sudo nmap -sV
 Подбор логина и пароля прошел удачно.
 ![image](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/42d1c903-c3f8-4236-bce0-9c0a19f16ebc)
 
+После включения fail2bun атакующий сервер отправлен в бан.
+![image](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/38f83296-b20f-4020-b548-fed596c4a80f)
+![image](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/4d33502d-3031-4360-be4b-6c105d6f1dad)
 
 
+Suricata проинформировала. 
+![image](https://github.com/MikhailNeklyudov/hw_11-01/assets/130427747/92b73dad-5ab0-4b78-a385-47756913d04b)
